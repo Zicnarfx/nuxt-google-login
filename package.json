@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-google-login",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "nuxt": "^4.5.2",
+    "vue": "^3.5.41",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "@vuetify/nuxt": "...",
+    "vuetify": "^4.1.12",
+    "vuetify-nuxt-module": "^1.0.0-rc.5"
+  }
+}
