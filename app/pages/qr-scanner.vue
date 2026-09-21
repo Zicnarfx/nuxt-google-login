@@ -1,35 +1,91 @@
 <template>
-  <div>
-    <h1>QR Scanner</h1>
-    <v-card justify="center" align="center" class="mx-auto" max-width="400">
-      <v-card-text>
-        <!-- show qr scanner -->
-        <video class="qr-video"></video>
-        <p> RESULT: </p>
-        <v-btn>
-          <v-icon>mdi-qrcode-scan</v-icon>
+  <v-container class="fill-height d-flex align-center justify-center">
+    <v-card class="scanner-card" elevation="2">
+
+      <!-- Scanner Area -->
+      <div class="scanner-box">
+        <!-- QR scanner/camera will appear here -->
+      </div>
+
+      <!-- Result -->
+      <div class="result">
+        RESULT:
+      </div>
+
+      <!-- Buttons -->
+      <div class="scanner-buttons">
+        <v-btn
+          class="scanner-btn"
+          variant="outlined"
+          @click="startScanner"
+        >
+          <v-icon start>mdi-qrcode-scan</v-icon>
           Start Scanner
         </v-btn>
-        <v-btn>
-          <v-icon>mdi-stop</v-icon>
+
+        <v-btn
+          class="scanner-btn"
+          variant="outlined"
+          @click="stopScanner"
+        >
+          <v-icon start>mdi-stop</v-icon>
           Stop Scanner
         </v-btn>
-      </v-card-text>
+      </div>
+
     </v-card>
-  </div>
+  </v-container>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
+
+const startScanner = () => {
+  console.log('Scanner started')
+}
+
+const stopScanner = () => {
+  console.log('Scanner stopped')
+}
 
 </script>
 
-<style>
-  .qr-video {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border: 5px solid #01f801;
-    border-radius: 50px;
-    background-color: #000000;
-  }
+<style scoped>
+.scanner-card {
+  width: 400px;
+  padding: 16px;
+}
+
+
+.scanner-box {
+  width: 100%;
+  height: 155px;
+  background: black;
+
+  border: 5px solid #00ff00;
+  border-radius: 50px;
+
+  margin-bottom: 22px;
+}
+
+.result {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+
+.scanner-buttons {
+  display: flex;
+
+ 
+  gap: 16px;
+
+  justify-content: center;
+}
+
+
+.scanner-btn {
+  min-width: 137px;
+  text-transform: none;
+}
 </style>
