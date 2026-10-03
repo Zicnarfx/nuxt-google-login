@@ -23,6 +23,11 @@
  
 </template>
 <script setup lang="ts">
+// @ts-nocheck
+definePageMeta({
+    
+    middleware: 'auth'
+})
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 

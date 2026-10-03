@@ -30,6 +30,10 @@
 
 <script setup lang="ts">
 // @ts-nocheck
+definePageMeta({
+    layout: false,
+    middleware: 'auth'
+})
 
 const config = useRuntimeConfig()
 definePageMeta({ layout: false })
